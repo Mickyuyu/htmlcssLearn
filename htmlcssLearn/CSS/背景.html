@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景:图片,平铺,颜色位置</title>
+    <style>
+        /**/
+        .t {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /*背景可以添加背景颜色，但是背景图片会压住背景颜色*/
+            background-image: url(./image/logo.jpg);
+            /*背景添加默认情况下是平铺的*/
+            background-repeat: no-repeat;
+            /*背景不平铺*/
+            /* background-repeat:repeat-x; */
+            /*背景横向平铺*/
+            /* background-repeat: repeat-y; */
+            /*背景众向平铺*/
+            /* background-position: top center; */
+            /*top center或者center top 效果一样*/
+            /* background-position: top; */
+            /*top center 和 top 效果是一样的y轴水平居中，只填x轴y轴默认水平居中*/
+            /* background-position: left center; */
+            /*左侧水平居中 right center 则相反*/
+            /* background-position: 30px 50px; */
+            /* 如果x轴y轴都精确数值，则x轴一定是在x坐标 ，y轴一定是在y坐标
+               如果只填x轴精确数值，则x轴一定是x坐标，y轴默认垂直居中*/
+
+        }
+
+        /*.b {
+            width: 118px;
+            height: 41px;
+            font-size: 14px;
+            color: rgb(70, 70, 70);
+            line-height: 41px;
+            font-weight: 400px;
+            background-image: url(./image/log1.png);
+            background-repeat: no-repeat;
+            background-position: -30px;
+            text-indent: 2em;
+         } */
+        body {
+            color: aliceblue;
+            font-size: 16px;
+            /* background-image: url(./image/beijing.jpg); */
+            /* background-position: top center; */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* scroll图片是默认随内容滚动而滚动; */
+            /* fixed 图片是固定了，不会随内容滚动 */
+            /* 背景复合性写法:使用简写属性时，没有特定的书写是顺序，一般习惯约定顺序为
+               background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置 */
+            background: #ffffff url(./image/beijing.jpg) no-repeat fixed center 50px;
+        }
+
+        div {
+            width: 1366px;
+            height: 83px;
+            background: rgba(0, 0, 0, 0.8) no-repeat fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>成长守护平台</div> -->
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <!-- 清除浮动要满足三个条件：1，父盒子是没有高度的
+                               2，子元素是浮动的
+                               3，浮动影响了整个布局 -->
+    <!-- .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }  -->
+    <style>
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }
+
+        .box {
+            width: 1226px;
+            border: 1px black;
+            margin: 0 auto;
+            /* overflow: hidden; 清除浮动*/
+        }
+
+        .box div {
+            width: 500px;
+            height: 220px;
+            background-color: aqua;
+            float: left;
+        }
+
+        .box3 {
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box3"></div>
+</body>
+
+</html>

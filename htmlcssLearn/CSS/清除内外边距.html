@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        span {
+            width: 300;
+            background-color: pink;
+            margin: 10px;
+            /*行内元素设置了上下边距，只显示左右边距，上下边距是无效的*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>123
+        <ol>1234</ol>
+    </div>
+    <span>行内元素只设置左右边距，除非时块级元素和行内块元素才设置上下边距</span>
+</body>
+
+</html>

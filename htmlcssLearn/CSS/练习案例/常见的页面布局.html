@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的页面布局</title>
+    <!-- 1，浮动和标准流的父盒子搭配（先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置） -->
+    <!-- 2，一个元素浮动了，理论上其余的兄弟元素也要浮动（浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准刘流） -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .top {
+            height: 50px;
+            background-color: gray;
+        }
+
+        .banner {
+            width: 980px;
+            height: 150px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+
+        .san {
+            width: 980px;
+            height: 150px;
+            background-color: pink;
+            margin: 10px auto;
+        }
+
+        .san li {
+            width: 236px;
+            height: 150px;
+            background-color: gray;
+            float: left;
+            margin-right: 12px;
+        }
+
+        .san .last {
+            margin-right: 0;
+        }
+
+        .si {
+            width: 980px;
+            height: 300px;
+            background-color: pink;
+            margin: 10px auto;
+        }
+
+        .si li {
+            width: 236px;
+            height: 300px;
+            background-color: gray;
+            float: left;
+            margin-right: 12px;
+        }
+
+        .si .last1 {
+            margin-right: 0;
+        }
+
+        .footer {
+            height: 250px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="banner"></div>
+    <div class="san">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <div class="si">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last1">4</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

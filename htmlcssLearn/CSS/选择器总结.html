@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标签选择器例子 */
+        p {
+            color: blueviolet;
+        }
+
+        /* 类选择器，.名类调用多类名使用方式：在class属性中写多个类名，多各类命中必须用空格隔开 */
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .blue {
+            color: blue;
+            background-color: blueviolet;
+        }
+
+        .red {
+            color: rgb(209, 68, 115);
+            background-color: aqua;
+        }
+
+        .yellor {
+            color: rgb(228, 248, 115);
+            background-color: rgb(214, 106, 55);
+        }
+
+        /* id选择器例子，只能调用一次，别的标签不能在使用这个id */
+        #pink {
+            color: blueviolet;
+        }
+
+        /* 通配符选择器 *   特殊情况才会使用*/
+        /* 这样写给所有元素都改为这个颜色*/
+        * {
+            color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>爱你乖乖</p>
+    <div class=" box blue">爸爸爱你哟</div>
+    <div class=" box red">爸爸爱你哟</div>
+    <div class=" box yellor">爸爸爱你哟</div>
+    <div id="pink">杰克麦克</div>
+</body>
+
+</html>

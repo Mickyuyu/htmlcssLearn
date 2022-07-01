@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            /*(最常用)*/
+            color: black;
+            text-decoration: none;
+
+        }
+
+        /* a:link为访问的的链接
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited 访问过的链接 
+        a:visited {
+            color: brown;
+        }*/
+
+
+        a:hover {
+            /* a:hover 鼠标经过的颜色 （最常用）*/
+            color: green;
+            text-decoration: underline;
+        }
+
+        /* a:active 点击的颜色 
+        a:active {
+            color: aqua;
+        }*/
+        input:focus {/*只对input使用，焦点*/
+            background-color: rgb(151, 200, 228);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">这是一个访问过的链接</a>
+    <a href="www.sdasd.com">这是一个没有访问过的链接</a>
+    <input type="text"><input type="text"><input type="text">
+</body>
+
+</html>

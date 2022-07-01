@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的特性</title>
+    <!-- 1，脱离标准普通流的控制（浮）移动到指定位置（动），（俗称脱标） -->
+    <!-- 2，浮动的盒子不在保留原先的位置 -->
+    <!-- 3，任何元素都可以浮动，不管原来是什么模式的元素，添加浮动之后具有行内块元素相似的特征 -->
+    <!-- 如果块级盒子没有设置宽度，默认宽度和父级元素一样宽，但是浮动之后，它的大小根据内容来决定 
+         浮动的盒子中间是没有缝隙的，是紧挨着一起的，与行内元素同理 -->
+ <!-- 为了让约束浮动的位置，采用的是先用标准流的父元素排列上下位置，之后内部子元素辞采取浮动排列左右位置，符合网页布局的第一准则 -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 900px;
+            background-color: gold;
+            margin: 100px auto;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            float: left;
+        }
+
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box1">2</div>
+    <p>12345ppppp</p>
+</body>
+
+</html>

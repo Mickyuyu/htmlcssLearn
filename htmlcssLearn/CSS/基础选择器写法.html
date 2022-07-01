@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            /*后代选择器*/
+            color: aqua;
+        }
+
+        ul li a {
+            color: red;
+        }
+
+        .nav {
+            /*类选择器*/
+            color: blue;
+        }
+
+        .nav>a {
+            /*子元素选择器*/
+            color: brown;
+        }
+
+        div,
+        .pink,
+        .green a {
+            /*并集选择器*/
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>那位你好呀</li>
+    </ul>
+    <ul>
+        <li>1234556</li>
+    </ul>
+    <ul>
+        <li>风格豆腐干</li>
+    </ul>
+    <ul>
+        <li><a href="#"></a> 合同对方个人</li>
+    </ul>
+    <ol class="nav">
+        <a href="#">合同对方个人</a>
+        <li>微软犯得上广泛的</li>
+        <li>微软犯得上广泛的</li>
+        <li>微软犯得上广泛的</li>
+        <li>微软犯得上广泛的</li>
+    </ol>
+    <ol>
+        <li>的规范化的网上</li>
+    </ol>
+    <ol>
+        <li>和夫人挺大方的人</li>
+    </ol>
+    <ol>
+        <li>问题的法国德国</li>
+    </ol>
+    <div>大头娃娃</div>
+    <span class="green">小头姐姐
+        <a href="#">试试</a>
+    </span>
+    <ol class="pink">
+        <li>光头强</li>
+        <li>熊大</li>
+        <li>熊二</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的边框,内边距</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            border: 10px red solid;
+            padding: 5px;
+            /*上下内边距5px*/
+            padding: 5px 10px;
+            /*上下内边距5px  左右内边距10px*/
+            padding: 5px 10px 20px;
+            /*上内边距5px  左右内边距10px 下内边距20px*/
+            padding: 5px 10px 20px 30px;
+            /*上内边距5px  右内边距10px 下内边距20px  左内边距30px*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>盒子的边框和内边距会影响盒子的大小,若想一致,需要调整盒子的宽高-内边距和边框
+    </div>
+</body>
+
+</html>
