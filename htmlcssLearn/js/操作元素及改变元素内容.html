@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素及改变元素内容</title>
+    <style>
+        div {
+            width: 150px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击显示事件</button>
+    <div>shijian</div>
+    <script>
+        var div = document.querySelector('div')
+        var btn = document.querySelector('button')
+        btn.onclick = function () {
+            div.innerText(2019)
+        }
+    </script>
+</body>
+
+</html>
