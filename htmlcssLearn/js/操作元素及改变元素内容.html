@@ -7,22 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>操作元素及改变元素内容</title>
     <style>
-        div {
-            width: 150px;
+        div,
+        p {
+            width: 200px;
+            height: 50px;
             background-color: pink;
         }
     </style>
 </head>
 
 <body>
+    <!-- 事件源 -->
     <button>点击显示事件</button>
-    <div>shijian</div>
+    <div>某个时间</div>
+    <p>1234</p>
     <script>
-        var div = document.querySelector('div')
+        // 当我们点击按钮 div里面的内容会发生变化
+        // 获取元素
         var btn = document.querySelector('button')
+        var div = document.querySelector('div')
+        // 注册事件
+        // 事件执行过程
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var day = date.getDay();
         btn.onclick = function () {
-            div.innerText(2019)
+            div.innerText = getDate();
         }
+        // 元素可以不添加事件
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = date.getDay();
+            return '今天是：' + year + '年' + month + '月' + dates + '日' + arr[day]
+        }
+        var p = document.querySelector('p');
+        p.innerHTML = getDate();
+        // element.innerHTML和element.innerText的区别在于：innerHTML保留空格和换行，innerText去除html标签，也会去掉空格和换行
     </script>
 </body>
 
