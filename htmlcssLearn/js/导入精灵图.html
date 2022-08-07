@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 317px;
+            height: 352px;
+            margin: 100px auto;
+        }
+
+        div li {
+            float: left;
+            list-style: none;
+            width: 56px;
+            height: 64px;
+            background-color: pink;
+            background: url(../img/jingltu.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+    <script>
+        var lis = document.querySelectorAll('li')
+        for (i = 0; i < lis.length; i++) {
+            var index = i + 64;
+            lis[i].style.backgroundPosition = '0 -' + index + 'px';
+
+        }
+    </script>
+</body>
+
+</html>
