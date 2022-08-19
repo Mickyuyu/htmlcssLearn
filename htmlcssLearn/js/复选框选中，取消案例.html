@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrab table {
+            width: 300px;
+            height: 150px;
+            border: 0.5px solid pink;
+            text-align: center;
+        }
+
+        .wrab thead {
+            color: white;
+            background-color: rgb(0, 140, 206);
+        }
+
+        .wrab #j_tb {
+            background-color: rgb(237, 240, 236);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrab">
+        <table>
+            <thead>
+                <td><input type="checkbox" id="j_cbAll"></td>
+                <td>商品</td>
+                <td>价钱</td>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>手机</td>
+                    <td>23234</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>手机</td>
+                    <td>23234</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>手机</td>
+                    <td>23234</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>手机</td>
+                    <td>23234</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            // 1，获取元素
+            var j_cbAll = document.getElementById('j_cbAll');
+            var tds = document.getElementById('j_tb').getElementsByTagName('input');
+            //全选复选框
+            j_cbAll.onclick = function () {
+                for (var i = 0; i < tds.length; i++) {
+                    // console.log(this.checked);//复选框选中时是ture
+                    tds[i].checked = this.checked;
+                }
+            }
+            // 反选复选框
+            for (var i = 0; i < tds.length; i++) {
+                tds[i].onclick = function () {
+                    var flag = true;
+                    for (var i = 0; i < tds.length; i++) {
+                        if (!tds[i].checked) {
+                            flag = false
+                            break
+                        }
+                    }
+                    j_cbAll.checked = flag;
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

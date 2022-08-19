@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+            /* Remove cell spacing */
+        }
+
+        thead {
+            background-color: rgb(135, 201, 231);
+            color: rgb(34, 45, 60);
+        }
+
+        tbody {
+            color: rgb(137, 147, 180);
+        }
+
+        td {
+            border-right: 0px;
+            border-bottom: 1px solid rgb(202, 204, 201);
+        }
+
+        .onMouse {
+            background-color: rgb(226, 242, 248);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>代码</td>
+                <td>名称</td>
+                <td>最新公布净值</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+            <tr>
+                <td>003245</td>
+                <td>农业银行金额三个月定期</td>
+                <td>1.234</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        // 获取元素
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        // 利用循环注册事件
+        for (var i = 0; i < trs.length; i++) {
+            trs[i].onmouseover = function () {
+                this.className = 'onMouse';
+            }
+            trs[i].onmouseout = function () {
+                this.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

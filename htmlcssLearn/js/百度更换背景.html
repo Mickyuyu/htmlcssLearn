@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background: url(../img/beijing1.jpeg) no-repeat center top;
+        }
+
+        .baidu {
+            overflow: hidden;
+            /* 隐藏多出来的内容 */
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+            /* cursor: pointer手型鼠标 */
+        }
+
+        .baidu img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="../img/beijing1.jpeg"></li>
+        <li><img src="../img/beijing2.jpeg"></li>
+        <li><img src="../img/beijing3.jpeg"></li>
+        <li><img src="../img/beijing4.jpeg"></li>
+    </ul>
+    <script>
+        // 1获取元素
+        var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        // 利用循环，遍历
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')'
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
