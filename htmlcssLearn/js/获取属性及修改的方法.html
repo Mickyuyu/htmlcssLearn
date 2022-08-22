@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="gg" index="ii" class="ww">
+    </div>
+    <script>
+        // element.属性（获取内置的属性）
+        // element.getAttribute('属性'){获取自定义的属性}
+        // element.setAttribute('属性'){修改自定义的属性}
+        // element.removeAttribute('属性'){删除自定义属性}
+        var div = document.querySelector('div');
+        console.log(div.id);
+        console.log(div.getAttribute('index'));
+        div.id = 'pp';
+        div.setAttribute('index', 22);
+        div.className = 'hh';
+        div.setAttribute('class', 'mm')
+
+    </script>
+</body>
+
+</html>
